@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Blockchain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>API Blockchain</h1>
+        </div>
+    </header>
+    <div class="container content">
+        <h1>Bienvenue sur l'API Blockchain</h1>
+        <a href="/mine" class="button">Miner un nouveau bloc</a>
+        <a href="/transactions/new" class="button">Créer une nouvelle transaction</a>
+        <a href="/chain" class="button">Voir la blockchain complète</a>
+        <a href="/nodes/register" class="button">Enregistrer de nouveaux noeuds</a>
+        <a href="/nodes/resolve" class="button">Résoudre les conflits</a>
+        <div class="guide">
+            <h2>Guide de la Blockchain</h2>
+            <p><strong>Étape 1:</strong> Commencez par créer une nouvelle transaction. Cliquez sur "Créer une nouvelle transaction" pour ajouter une transaction à la blockchain.</p>
+            <p><strong>Étape 2:</strong> Une fois que vous avez créé une transaction, vous pouvez miner un nouveau bloc. Cliquez sur "Miner un nouveau bloc" pour ajouter la transaction à la blockchain.</p>
+            <p><strong>Étape 3:</strong> Voir la blockchain complète pour voir tous les blocs et transactions. Cliquez sur "Voir la blockchain complète" pour voir les détails.</p>
+            <p><strong>Étape 4:</strong> Enregistrer de nouveaux noeuds pour étendre le réseau blockchain. Cliquez sur "Enregistrer de nouveaux noeuds" pour ajouter de nouveaux noeuds.</p>
+            <p><strong>Étape 5:</strong> Résoudre les conflits pour s'assurer que la blockchain est cohérente sur tous les noeuds. Cliquez sur "Résoudre les conflits" pour synchroniser la blockchain.</p>
+            <img src="https://via.placeholder.com/600x400" alt="Schéma de la Blockchain">
+        </div>
+    </div>
+</body>
+</html>

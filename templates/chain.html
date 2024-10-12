@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Complète</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blockchain Complète</h1>
+        </div>
+    </header>
+    <div class="container content">
+        <h1>Blockchain Complète</h1>
+        <div class="block-container">
+            {% for block in chain %}
+            <div class="block-item">
+                <div class="block">
+                    <h3>Bloc #{{ block.index }}</h3>
+                    <p><strong>Hash Précédent:</strong> {{ block.previous_hash }}</p>
+                    <p><strong>Hash Actuel:</strong> {{ block.hash }}</p>
+                    <p><strong>Transactions:</strong></p>
+                    <ul>
+                        {% for transaction in block.transactions %}
+                        <li>{{ transaction }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% if not loop.last %}
+                <div class="arrow">⟶</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/" class="button">Retour à l'accueil</a>
+    </div>
+</body>
+</html>
